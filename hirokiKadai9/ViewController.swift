@@ -9,11 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet private weak var prefectureLabel: UILabel!
+
+    @IBAction private func exit(segue: UIStoryboardSegue) {
     }
-
-
+    
+    @IBAction private func exitDone(segue: UIStoryboardSegue) {
+        guard let selectPrefecture = segue.source as? SelectPrefectureViewController else { return }
+        prefectureLabel.text = selectPrefecture.prefectureName
+    }    
 }
 

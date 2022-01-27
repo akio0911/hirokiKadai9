@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hirokiKadai9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zLo-aR-KBD">
+                                <rect key="frame" x="20" y="144" width="374" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="都道府県" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfT-zE-OH3">
+                                        <rect key="frame" x="0.0" y="5.5" width="69.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U24-i1-ty6">
+                                        <rect key="frame" x="169.5" y="5.5" width="52" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4I-Mz-gkH">
+                                        <rect key="frame" x="321" y="0.0" width="53" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="入力"/>
+                                        <connections>
+                                            <segue destination="qVo-ZS-eQA" kind="presentation" id="saQ-bn-jth"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zLo-aR-KBD" secondAttribute="trailing" constant="20" id="6kZ-GU-KLs"/>
+                            <constraint firstItem="zLo-aR-KBD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Fon-Ps-J9D"/>
+                            <constraint firstItem="zLo-aR-KBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mi5-oo-TPV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="prefectureLabel" destination="U24-i1-ty6" id="L1N-6O-Gjl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </scene>
+        <!--Select Prefecture View Controller-->
+        <scene sceneID="hYc-HI-hfv">
+            <objects>
+                <viewController id="5QG-y5-pv4" customClass="SelectPrefectureViewController" customModule="hirokiKadai9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Q4-mi-g7V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="McN-Pu-44A">
+                                <rect key="frame" x="166.5" y="136" width="81.5" height="148"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wC-pp-dY5">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="東京都"/>
+                                        <connections>
+                                            <action selector="tapTokyo:" destination="5QG-y5-pv4" eventType="touchUpInside" id="NOI-8W-M3V"/>
+                                            <segue destination="1sR-Ei-fRU" kind="unwind" identifier="close" unwindAction="exitDoneWithSegue:" id="sFH-gt-ket"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjb-wa-F2D">
+                                        <rect key="frame" x="0.0" y="39" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="神奈川県"/>
+                                        <connections>
+                                            <action selector="tapKanagawa:" destination="5QG-y5-pv4" eventType="touchUpInside" id="gCx-i5-KTH"/>
+                                            <segue destination="1sR-Ei-fRU" kind="unwind" identifier="close" unwindAction="exitDoneWithSegue:" id="pCL-V3-61i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-4e-JVG">
+                                        <rect key="frame" x="0.0" y="78" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="埼玉県"/>
+                                        <connections>
+                                            <action selector="tapSaitama:" destination="5QG-y5-pv4" eventType="touchUpInside" id="yaQ-AU-z3Q"/>
+                                            <segue destination="1sR-Ei-fRU" kind="unwind" identifier="close" unwindAction="exitDoneWithSegue:" id="Gq1-99-hf7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-uu-nqJ">
+                                        <rect key="frame" x="0.0" y="117" width="81.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="千葉県"/>
+                                        <connections>
+                                            <action selector="tapChiba:" destination="5QG-y5-pv4" eventType="touchUpInside" id="f4y-El-owu"/>
+                                            <segue destination="1sR-Ei-fRU" kind="unwind" identifier="close" unwindAction="exitDoneWithSegue:" id="CHC-0t-I13"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ns1-0v-Rvl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="McN-Pu-44A" firstAttribute="centerX" secondItem="8Q4-mi-g7V" secondAttribute="centerX" id="C5L-nA-713"/>
+                            <constraint firstItem="McN-Pu-44A" firstAttribute="top" secondItem="Ns1-0v-Rvl" secondAttribute="top" constant="80" id="FUv-gE-XI7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YSw-fR-Ssf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8sU-Bz-YLp">
+                            <connections>
+                                <segue destination="1sR-Ei-fRU" kind="unwind" unwindAction="exitWithSegue:" id="Lt9-4z-Fkl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2c-MP-HU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1sR-Ei-fRU" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1866.6666666666667" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xre-JG-LBn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qVo-ZS-eQA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0bd-pE-Amx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5QG-y5-pv4" kind="relationship" relationship="rootViewController" id="Yep-sw-z2p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SE9-EE-Zxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.52173913043487" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

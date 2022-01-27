@@ -13,6 +13,7 @@
 		FE05683127A21EEB00F88FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE05682F27A21EEB00F88FC3 /* Main.storyboard */; };
 		FE05683327A21EEB00F88FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE05683227A21EEB00F88FC3 /* Assets.xcassets */; };
 		FE05683627A21EEB00F88FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE05683427A21EEB00F88FC3 /* LaunchScreen.storyboard */; };
+		FE05683E27A2446A00F88FC3 /* SelectPrefectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05683D27A2446A00F88FC3 /* SelectPrefectureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FE05683227A21EEB00F88FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE05683527A21EEB00F88FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE05683727A21EEB00F88FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE05683D27A2446A00F88FC3 /* SelectPrefectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPrefectureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FE05682927A21EEB00F88FC3 /* AppDelegate.swift */,
 				FE05682B27A21EEB00F88FC3 /* SceneDelegate.swift */,
 				FE05682D27A21EEB00F88FC3 /* ViewController.swift */,
+				FE05683D27A2446A00F88FC3 /* SelectPrefectureViewController.swift */,
 				FE05682F27A21EEB00F88FC3 /* Main.storyboard */,
 				FE05683227A21EEB00F88FC3 /* Assets.xcassets */,
 				FE05683427A21EEB00F88FC3 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				FE05682E27A21EEB00F88FC3 /* ViewController.swift in Sources */,
 				FE05682A27A21EEB00F88FC3 /* AppDelegate.swift in Sources */,
 				FE05682C27A21EEB00F88FC3 /* SceneDelegate.swift in Sources */,
+				FE05683E27A2446A00F88FC3 /* SelectPrefectureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
