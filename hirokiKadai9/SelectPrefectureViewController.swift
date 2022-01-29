@@ -9,7 +9,7 @@ import UIKit
 
 class SelectPrefectureViewController: UIViewController {
 
-    var prefectureName = ""
+    private(set) var prefectureName: String?
     
     @IBAction private func tapTokyo(_ sender: Any) {
         backSegue(prefecture: "東京都")
